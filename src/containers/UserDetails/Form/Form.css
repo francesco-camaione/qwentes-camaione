@@ -1,0 +1,83 @@
+.login--form a {
+    height: 32px;
+    background-color: #2d7ee7;
+    color: #ffffff;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}
+
+.login--div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #2d7ee7;
+}
+
+.login--div h2 {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.form--initials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2d7ee7;
+    color: #ffffff;
+    border-radius: 50%;
+    min-height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.login--form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 270px;
+}
+
+.name--div,
+.email--div,
+.company--div {
+    display: flex;
+    flex-direction: column;
+}
+
+.login--form div input {
+    border: 1px solid #8e8e8e;
+    padding: 2px;
+    padding-left: 10px;
+    height: 27px;
+    width: auto;
+    color: #2d7ee7;
+    outline: none;
+}
+
+.name--labels,
+.email--labels,
+.company--labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 11px;
+}
+
+#form--button {
+    height: 32px;
+    background-color: #2d7ee7;
+    color: #ffffff;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+.data--message {
+    text-align: center;
+    color: green;
+}

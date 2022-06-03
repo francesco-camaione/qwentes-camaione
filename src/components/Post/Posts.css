@@ -1,0 +1,13 @@
+.post--article {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    width: 80%;
+    text-decoration: none;
+    color: #2d7ee7;
+}
+
+.post--article:hover {
+    transform:translateY(-2.5px);
+    transition-duration: 0.3s;
+}

@@ -1,0 +1,44 @@
+.nav--header {
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    width: 100%;
+    background-color: #2d7ee7;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: #ffffff;
+}
+
+.nav--ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 67%;
+    list-style: none;
+    color: #ffffff;
+    padding: 0;
+}
+
+.contacts--link, .posts--link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.logout--div {
+    text-align: center;
+    width: 33%;
+    background-color: rgb(231, 240, 114);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+.logout--link {
+    text-decoration: none;
+    color: #2d7ee7;
+    cursor: pointer;
+}

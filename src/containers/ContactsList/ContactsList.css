@@ -1,0 +1,12 @@
+.contacts--title {
+    color: #2d7ee7;
+    text-align: center;
+}
+
+.contacts--section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 70px;
+}

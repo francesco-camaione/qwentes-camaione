@@ -1,0 +1,16 @@
+.user--link {
+    display: flex;
+    flex-direction: row;
+    background-color: #f0f0f0;
+    width: 90%;
+    align-items: center;
+    text-decoration: none;
+}
+
+.contact--article {
+    display: flex;
+    flex-direction: row;
+    background-color: #f0f0f0;;
+    width: 100%;
+    align-items: center;
+}

@@ -1,0 +1,18 @@
+.initials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2d7ee7;
+    color: #ffffff;
+    border-radius: 50%;
+    min-height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    margin-left: 18px;
+}
+
+.description--div {
+    margin-left: 40px;
+    color: #2d7ee7;
+}

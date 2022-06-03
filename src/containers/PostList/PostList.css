@@ -1,0 +1,13 @@
+.postlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    margin-bottom: 60px;
+    color: #2d7ee7;
+    gap: 20px;
+}
+
+.posts--title {
+    color: #2d7ee7;
+}

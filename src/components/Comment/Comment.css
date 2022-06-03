@@ -1,0 +1,8 @@
+.comment--article {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    color: #2d7ee7;
+    padding: 20px;
+    border-radius: 8px;
+}

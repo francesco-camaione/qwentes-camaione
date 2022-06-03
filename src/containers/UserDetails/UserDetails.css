@@ -1,0 +1,9 @@
+.post--section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    align-items: center;
+}
