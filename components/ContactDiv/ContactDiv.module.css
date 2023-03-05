@@ -1,0 +1,7 @@
+.contact_div {
+    display: flex;
+    justify-content: center;
+    padding: 3.8rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}

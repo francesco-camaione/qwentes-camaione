@@ -1,0 +1,93 @@
+.prices_div {
+    display: flex;
+    justify-content: center;
+    background-color: #242222;
+    flex-direction: column;
+    text-align: center;
+}
+
+.prices_div h3 {
+    margin: 3rem;
+    font-size: 1.6rem;
+    color: #fff;
+    font-style: italic;
+}
+
+.prices_options_div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.prices_options_div h4 {
+    text-align: center;
+    margin-bottom: 2rem;
+    height: 55px;
+}
+
+.prices_options {
+    border: 2px solid #faaf45;
+    width: 325px;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: left;
+    position: relative;
+}
+
+.prices_options h4,
+.prices_options p {
+    color: #fff;
+}
+
+
+
+.ul {
+    padding: 0;
+    min-height: 13rem;
+}
+
+.ul li {
+    color: #fff;
+}
+
+.text_center {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.info_p {
+    font-size: 12px;
+    margin-top: 10%;
+    border-top: 1px solid #faaf45;
+}
+
+.timetables {
+    font-size: 16px;
+    margin-top: 10%;
+    border-top: 1px solid #faaf45;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    color: #fff;
+}
+
+.text_underlined {
+    text-decoration: underline;
+}
+
+.van_img,
+.luggage_img {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    top: -5.96%;
+    right: 3%;
+}
+
+.luggage_img {
+    right: 25%;
+    width: 12.5%;
+    top: -4.8%;
+}

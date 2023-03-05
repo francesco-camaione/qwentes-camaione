@@ -1,0 +1,26 @@
+.cookie_div {
+    position: fixed;
+    bottom: 0;
+    background-color: #faaf45;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.cookie_div button {
+    border: none;
+    cursor: pointer;
+    background-color: #242222;
+    color: #fff;
+    border-radius: 3px;
+    padding: 0.4rem 0.7rem;
+    max-height: 2rem;
+}
+
+.cookie_link {
+    text-decoration: underline;
+}

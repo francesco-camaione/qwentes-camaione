@@ -1,0 +1,261 @@
+.main {
+    background-color: #242222;
+}
+
+.main_img {
+    aspect-ratio: 16/9;
+    width: 50%;
+    height: auto;
+    border-radius: 26px;
+}
+
+.bckg {
+    background-image: url("../../public/images/luggage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title_backg {
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 4rem 0;
+    padding-bottom: 1rem;
+}
+
+.title_container {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 3.8rem;
+    background: linear-gradient(145deg, #faaf45, #ff7347);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    color: inherit;
+    -webkit-text-fill-color: transparent;
+}
+
+.h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.h3 {
+    color: #fff;
+    margin-top: 1rem;
+    font-weight: 400;
+    font-size: 1.05rem;
+}
+
+.what_section {
+    background-color: #d4d1d1;
+    color: #333;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.where_div {
+    background-color: blue;
+    text-align: center;
+}
+
+.what_div {
+    border: 2px solid black;
+    width: 21rem;
+    height: 20rem;
+    padding: 4rem;
+    border-radius: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.step_1 {
+    background: linear-gradient(145deg, #faaf45, #ff7347);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    color: inherit;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+}
+
+.step_2 {
+    background: linear-gradient(145deg, #ff0101, #6447ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    color: inherit;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+}
+
+.step_3 {
+    background: linear-gradient(145deg, #6447ff, #6408fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    color: inherit;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+}
+
+.divs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.details_div {
+    padding-bottom: 3rem;
+
+}
+
+.services_div {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    gap: 3rem;
+}
+
+.services_div div {
+    width: 21rem;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #98989e;
+}
+
+.map_div {
+    padding-bottom: 5rem;
+    padding-top: 0.6rem;
+    background-image: url("../../public/images/luggage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.map_div h4 {
+    margin: 1rem;
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    color: #faaf45;
+}
+
+.map_link_div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.map_link_div div {
+    position: relative;
+}
+
+
+.map_image {
+    border-radius: 26px;
+    cursor: pointer;
+    aspect-ratio: 16/9;
+    width: 92%;
+    height: auto;
+}
+
+.map_image:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .3);
+
+}
+
+.address {
+    position: absolute;
+    right: 14%;
+    top: 1%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.div_flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.find_more {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #fff;
+}
+
+.what_we_do {
+    font-style: italic;
+    margin: 4rem;
+    margin-top: 3rem;
+}
+
+.h2_why {
+    text-align: center;
+    margin: 4rem;
+    margin-top: 5rem;
+    font-style: italic;
+}
+
+.span_why {
+    background: linear-gradient(145deg, #faaf45, #ff7347);
+    background-clip: border-box;
+    background-clip: text;
+    box-decoration-break: clone;
+    -webkit-text-fill-color: transparent;
+    color: inherit;
+    border-bottom: 2px solid #333;
+    border-end-end-radius: 12px;
+}
+
+.taxi_m {
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.text_underlined {
+    text-decoration: underline;
+}
+
+.relative {
+    position: relative;
+}
+
+.relative h3 {
+    height: 25px;
+}
+
+.relative p {
+    height: 42px;
+}
+
+.man_img {
+    width: 35px;
+    height: auto;
+}
