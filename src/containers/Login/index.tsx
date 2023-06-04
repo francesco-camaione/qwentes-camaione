@@ -8,7 +8,7 @@ function setToken(): void {
 }
 
 
-export function Login() {
+export function Login(): JSX.Element {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [showButton, setShowButton] = useState(false)

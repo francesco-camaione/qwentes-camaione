@@ -1,4 +1,4 @@
- [Link](https://qwentes-camaione.vercel.app)
+ [Deploy link](https://qwentes-camaione.vercel.app)
  
  To run this app: 
 1.

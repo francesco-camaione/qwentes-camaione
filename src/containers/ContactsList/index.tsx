@@ -4,7 +4,7 @@ import { ContactModel } from "../../models/contactModel"
 import { getData } from "../../services/getData"
 import "./ContactsList.css"
 
-export function ContactsList() {
+export function ContactsList(): JSX.Element {
     const [data, setData] = useState<ContactModel[]>()
 
     useEffect(() => {

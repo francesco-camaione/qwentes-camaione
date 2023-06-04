@@ -10,7 +10,7 @@ import { getUserDetails } from "../../services/getUserDetails"
 import { ContactModel } from "./../../models/contactModel"
 import "./PostDetails.css"
 
-export function PostDetails() {
+export function PostDetails(): JSX.Element {
     const [postInfo, setPostInfo] = useState<PostModel>()
     const [author, setAuthor] = useState<ContactModel>()
     const [comments, setComments] = useState<CommentModel[]>()

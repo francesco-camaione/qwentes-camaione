@@ -4,7 +4,7 @@ import { getData } from "../../services/getData"
 import { Post } from "../../components/Post"
 import "./PostList.css"
 
-export function PostList() {
+export function PostList(): JSX.Element {
     const [posts, setPosts] = useState<PostModel[]>()
 
     useEffect(() => {

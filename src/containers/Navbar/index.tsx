@@ -6,7 +6,7 @@ function deleteToken() {
     return;
 }
 
-export function Navbar() {
+export function Navbar(): JSX.Element {
 
     return (
         <header className="nav--header">

@@ -10,7 +10,7 @@ interface Props {
     body: string,
 }
 
-export function Post(props: Props) {
+export function Post(props: Props): JSX.Element {
     const dispatch = useDispatch()
     return (
         <Link to="/posts/post-details" className="post--article" onClick={() => dispatch(setPostId(props.postId))}>

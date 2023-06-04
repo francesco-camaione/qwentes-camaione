@@ -11,7 +11,7 @@ interface Props {
     city: string,
 }
 
-export function Contact(props: Props) {
+export function Contact(props: Props): JSX.Element {
     const dispatch = useDispatch()
 
     return (

@@ -11,7 +11,7 @@ interface Props {
     company: CompanyModel
 }
 
-export function Form(props: Props) {
+export function Form(props: Props): JSX.Element {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [company, setCompany] = useState("")

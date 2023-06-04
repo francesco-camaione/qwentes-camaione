@@ -40,7 +40,7 @@ const empty_data: ContactModel = {
     company: empty_company
 }
 
-export function UserDetails() {
+export function UserDetails(): JSX.Element {
     const userId: number = useSelector((state: any) => state.userId.value)
     const [data, setData] = useState<ContactModel>(empty_data)
     const [post, setPost] = useState<PostModel[]>(empty_post)
