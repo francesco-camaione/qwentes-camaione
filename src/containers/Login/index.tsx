@@ -2,8 +2,9 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import "./Login.css"
 
-function setToken() {
-    return localStorage.setItem("token", "token1")
+function setToken(): void {
+    localStorage.setItem("token", "token1")
+    return;
 }
 
 
@@ -13,11 +14,11 @@ export function Login() {
     const [showButton, setShowButton] = useState(false)
 
     useEffect(() => {
-        let email_border: any = document.getElementById("email--input")?.style
-        let password_border: any = document.getElementById("password--input")?.style
+        let email_border: CSSStyleDeclaration = document.getElementById("email--input")!.style
+        let password_border: CSSStyleDeclaration = document.getElementById("password--input")!.style
 
         // managing email input borders colors
-        email.includes("@") ? (email_border.border = "1px solid green") : (email_border.border = "1px solid red")
+        email.includes("@") && email_border ? (email_border.border = "1px solid green") : (email_border.border = "1px solid red")
         email.length === 0 && (email_border.border = "1px solid #8e8e8e")
 
         // managing password input borders colors

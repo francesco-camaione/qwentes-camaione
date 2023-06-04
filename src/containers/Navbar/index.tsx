@@ -2,7 +2,8 @@ import { Link } from "react-router-dom"
 import "./Navbar.css"
 
 function deleteToken() {
-    return localStorage.clear()
+    localStorage.clear()
+    return;
 }
 
 export function Navbar() {
@@ -10,7 +11,7 @@ export function Navbar() {
     return (
         <header className="nav--header">
             <nav className="navbar">
-                <ul className="nav--ul">
+                <ul className="nav--ul" >
                     <Link to="/contacts" className="contacts--link"><li>CONTACTS</li></Link>
                     <Link to="/posts" className="posts--link" ><li>POSTS</li></Link>
                 </ul>
