@@ -1,4 +1,4 @@
-export async function patchUserDetails(userId: number, name: string, email: string, company_name: string) {
+export async function patchUserDetails(userId: number, name: string, email: string, company_name: string): Promise<Response> {
 
     const url = `https://jsonplaceholder.typicode.com/users/${userId}`
     const response = await fetch(url, {

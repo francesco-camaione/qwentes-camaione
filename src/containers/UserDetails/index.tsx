@@ -20,14 +20,18 @@ export function UserDetails() {
     const [post, setPost] = useState<PostModel[]>(empty_post)
 
     useEffect(() => {
-        getUserDetails(userId).then(response => {
-            setData(response)
+        getUserDetails(userId).then(async response => {
+            if (response.ok) {
+                setData(await response.json())
+            }
         }).catch(error => {
             setData(error)
         })
 
-        getUserPosts(userId).then(response => {
-            setPost(response)
+        getUserPosts(userId).then(async response => {
+            if (response.ok) {
+                setPost(await response.json())
+            }
         }).catch(error => {
             setPost(error)
         })

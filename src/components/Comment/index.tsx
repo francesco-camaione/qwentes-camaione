@@ -1,5 +1,6 @@
 import "./Comment.css"
 
+
 interface Props {
     comment_name: string,
     comment_body: string

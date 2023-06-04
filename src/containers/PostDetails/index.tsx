@@ -18,20 +18,26 @@ export function PostDetails() {
     const userId: number = useSelector((state: any) => state.userId.value)
 
     useEffect(() => {
-        getPost(postId).then(response => {
-            setPostInfo(response)
+        getPost(postId).then(async response => {
+            if (response.ok) {
+                setPostInfo(await response.json())
+            }
         }).catch(error => {
             setPostInfo(error)
         })
 
-        getUserDetails(userId).then(response => {
-            setAuthor(response)
+        getUserDetails(userId).then(async response => {
+            if (response.ok) {
+                setAuthor(await response.json())
+            }
         }).catch(error => {
             setAuthor(error)
         })
 
-        getComments(postId).then(response => {
-            setComments(response)
+        getComments(postId).then(async response => {
+            if (response.ok) {
+                setComments(await response.json())
+            }
         }).catch(error => {
             setComments(error)
         })
@@ -39,7 +45,7 @@ export function PostDetails() {
 
     const comment_elements = comments?.map((comment: CommentModel) => {
         return (
-            <Comment 
+            <Comment
                 key={comment.id}
                 comment_name={comment.name}
                 comment_body={comment.body}

@@ -9,8 +9,10 @@ export function PostList() {
 
     useEffect(() => {
 
-        getData("posts").then(response => {
-            setPosts(response)
+        getData("posts").then(async response => {
+            if (response.ok) {
+                setPosts(await response.json())
+            }
         }).catch(error => {
             setPosts(error)
         })

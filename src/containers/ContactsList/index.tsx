@@ -9,11 +9,17 @@ export function ContactsList() {
 
     useEffect(() => {
         // get users data from api
-        getData("users").then(response => {
-            setData(response)
-        }).catch((error) => {
-            setData(error)
-        })
+        getData("users")
+            .then(async response => {
+                if (response.ok) {
+                    const res: ContactModel[] = await response.json()
+                    setData(() => res)
+                } else {
+                    throw new Error("error during the get data request")
+                }
+            }).catch((error) => {
+                setData(() => error)
+            })
     }, [])
 
 

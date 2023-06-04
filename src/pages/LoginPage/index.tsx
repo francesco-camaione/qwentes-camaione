@@ -2,6 +2,7 @@ import { Login } from "../../containers/Login"
 
 export function LoginPage() {
 
+	// typescript training below
 	function concatenaArray<T, T2>(array1: T[], array2: T2[]): (T | T2)[] {
 		return [...array1, ...array2]
 	}
@@ -10,11 +11,9 @@ export function LoginPage() {
 
 	const arr2 = ["a", "b"]
 
-	console.log(concatenaArray(arr1, arr2))
 
-	type T1 = string
 
-	class Contenitore<T extends T1> {
+	class Contenitore<T> {
 		size: T
 		height: number
 
@@ -46,7 +45,6 @@ export function LoginPage() {
 		return uniqueArray
 	}
 
-	console.log(findUnique([0, 0, 1, 2, 2, 3]))
 
 	function genericF<A, B>(a: A, b: B): { a: A, b: B } {
 		return { a, b }
@@ -55,5 +53,37 @@ export function LoginPage() {
 	function g<T>(par: Promise<T>): Promise<T> {
 		return par.then((v) => v)
 	}
+
+	const calculateSum = async (n: number, r: number): Promise<number> => {
+		return n + r
+	}
+
+	const fetchData = async (url: string) => {
+		new Promise((res, rej) => fetch(url, {
+			method: "GET",
+			headers: { "Content-Type": "application/json" },
+		})
+			.then(response => {
+				if (response.ok) {
+					res(response)
+				} else {
+					throw new Error("error")
+				}
+			}
+			)
+			.catch(err => rej(err))
+
+		)
+		return;
+	}
+
+
+	function filterArrayByType<T extends U, U>(arr: (T | U)[], t: U): U[] {
+		const filteredArray: U[] = arr.filter((el) => {
+			return typeof el === typeof t
+		})
+		return filteredArray
+	}
+
 	return <Login />
 }
