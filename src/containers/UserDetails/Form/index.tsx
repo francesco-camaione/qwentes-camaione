@@ -5,7 +5,7 @@ import { patchUserDetails } from "../../../services/patchUserDetails"
 import "./Form.css"
 
 interface Props {
-    id: number 
+    id: number
     full_name: string
     email: string
     company: CompanyModel
@@ -16,11 +16,13 @@ export function Form(props: Props): JSX.Element {
     const [email, setEmail] = useState("")
     const [company, setCompany] = useState("")
     const [dataPatched, setDataPatched] = useState(false)
+    const two_letters = initials(props.full_name)
 
     useEffect(() => {
-        let email_border: any = document.getElementById("email--input")?.style
-        let name_border: any = document.getElementById("name--input")?.style
-        let button: any = document.getElementById("form--button")
+        let email_border: CSSStyleDeclaration = document.getElementById("email--input")!.style
+        let name_border: CSSStyleDeclaration = document.getElementById("name--input")!.style
+        let button = document.getElementById("form--button")! as HTMLButtonElement
+        const button_style: CSSStyleDeclaration = button.style
         // managing email input borders colors
         email.includes("@") ? (email_border.border = "1px solid green") : (email_border.border = "1px solid red")
         email.length === 0 && (email_border.border = "1px solid #8e8e8e")
@@ -36,23 +38,26 @@ export function Form(props: Props): JSX.Element {
         name.length < 6 && (button.disabled = true)
 
         //managing button opacity
-        email.includes("@") && name.length >= 6 && (button.style.opacity = 1)
-        !email.includes("@") && (button.style.opacity = 0.7)
-        name.length < 6 && (button.style.opacity = 0.7)
+        email.includes("@") && name.length >= 6 && (button_style.opacity = "1")
+        !email.includes("@") && (button_style.opacity = "0.7")
+        name.length < 6 && (button_style.opacity = "0.7")
 
     }, [email, name])
 
-    const two_letters = initials(props.full_name)
-
-    function patchData(event: FormEvent) {
-        // prevent default or it doesn t work,
-        // i think because onsubmit page refresh before the patch request is shipped
+    function patchData(event: FormEvent): void {
         event.preventDefault()
-        patchUserDetails(props.id!, name, email, company)
+        patchUserDetails(props.id, name, email, company)
             .then((response) => {
-
-                response.status === 200 && setDataPatched(true)
+                if (response.ok) {
+                    setDataPatched(true)
+                } else {
+                    throw new Error("error patching the request")
+                }
             })
+            .catch((err) => {
+                throw new Error(err)
+            })
+        return;
     }
 
     return (
@@ -61,7 +66,7 @@ export function Form(props: Props): JSX.Element {
             <div className="form--initials">
                 <h4>{two_letters}</h4>
             </div>
-            <form className="login--form" onSubmit={(event) => {patchData(event)}}>
+            <form className="login--form" onSubmit={(event) => { patchData(event) }}>
                 <div className="name--div">
                     <div className="name--labels">
                         <label>Full Name</label>

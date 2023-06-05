@@ -24,3 +24,4 @@ export const ContactDescription: FunctionComponent<Props> = (props): JSX.Element
         </>
     )
 }
+
