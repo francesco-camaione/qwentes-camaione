@@ -1,4 +1,4 @@
-import React, { FunctionComponent, FunctionComponentElement } from "react"
+import { FunctionComponent } from "react"
 import { initials } from "../../helpers/utils"
 import "./ContactDescription.css"
 
@@ -9,7 +9,7 @@ interface Props {
     city: string | undefined,
 }
 
-export const ContactDescription: FunctionComponent<Props> = (props): JSX.Element => {
+export const ContactDescription = (props: Props): JSX.Element => {
     const two_letters = initials(props.full_name)
 
     return (
