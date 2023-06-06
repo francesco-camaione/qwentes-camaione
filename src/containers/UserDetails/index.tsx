@@ -20,7 +20,7 @@ export function UserDetails(): JSX.Element {
                 setData(await response.json())
             }
         }).catch(error => {
-            setData(error)
+            new Error(error)
         })
 
         getUserPosts(userId).then(async response => {
@@ -28,11 +28,11 @@ export function UserDetails(): JSX.Element {
                 setPost(await response.json())
             }
         }).catch(error => {
-            setPost(error)
+            new Error(error)
         })
     }, [userId])
 
-    const post_elements = post.map((post: PostModel) => {
+    const post_elements = post?.map((post: PostModel) => {
         return (
             <Post
                 key={post.id}
@@ -47,10 +47,10 @@ export function UserDetails(): JSX.Element {
     return (
         <div>
             <Form
-                id={data.id}
-                full_name={data.name}
-                email={data.email}
-                company={data.company}
+                id={data?.id}
+                full_name={data?.name}
+                email={data?.email}
+                company={data?.company}
             />
             <section className="post--section">
                 {post_elements}

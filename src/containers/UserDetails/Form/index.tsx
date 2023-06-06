@@ -5,10 +5,10 @@ import { patchUserDetails } from "../../../services/patchUserDetails"
 import "./Form.css"
 
 interface Props {
-    id: number
-    full_name: string
-    email: string
-    company: CompanyModel
+    id?: number
+    full_name?: string
+    email?: string
+    company?: CompanyModel
 }
 
 export function Form(props: Props): JSX.Element {
