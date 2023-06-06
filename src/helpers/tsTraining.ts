@@ -80,3 +80,17 @@ function fetchData(url: string): Promise<Response> {
             })
     })
 }
+
+interface Dog extends Dad {
+    name: string
+    age: number
+}
+
+interface Dad {
+    name: string
+    age: number
+    x: number
+}
+
+// if Dog and Dad interfaces have the same properties the condition extends...is true
+type ConditionalType = Dog extends Dad ? [] : string

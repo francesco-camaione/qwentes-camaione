@@ -11,8 +11,8 @@ import "./UserDetails.css"
 
 export function UserDetails(): JSX.Element {
     const userId: number = useSelector((state: any) => state.userId.value)
-    const [data, setData] = useState<ContactModel>({} as ContactModel)
-    const [post, setPost] = useState<PostModel[]>([] as PostModel[])
+    const [data, setData] = useState<ContactModel>()
+    const [post, setPost] = useState<PostModel[]>()
 
     useEffect(() => {
         getUserDetails(userId).then(async response => {
