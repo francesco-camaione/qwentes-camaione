@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useSelector } from "react-redux"
-import { AddressModel, CompanyModel, ContactModel } from "../../models/contactModel"
+import { ContactModel } from "../../models/contactModel"
 import { PostModel } from "../../models/postModel"
 import { getUserPosts } from "../../services/getUserPosts"
 import { getUserDetails } from "../../services/getUserDetails"
