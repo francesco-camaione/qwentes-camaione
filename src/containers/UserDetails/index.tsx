@@ -20,7 +20,7 @@ export function UserDetails(): JSX.Element {
                 setData(await response.json())
             }
         }).catch(error => {
-            new Error(error)
+            throw new Error(error)
         })
 
         getUserPosts(userId).then(async response => {
@@ -28,7 +28,7 @@ export function UserDetails(): JSX.Element {
                 setPost(await response.json())
             }
         }).catch(error => {
-            new Error(error)
+            throw new Error(error)
         })
     }, [userId])
 

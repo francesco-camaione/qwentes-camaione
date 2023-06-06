@@ -46,17 +46,19 @@ export function Form(props: Props): JSX.Element {
 
     function patchData(event: FormEvent): void {
         event.preventDefault()
-        patchUserDetails(props.id, name, email, company)
-            .then((response) => {
-                if (response.ok) {
-                    setDataPatched(true)
-                } else {
-                    throw new Error("error patching the request")
-                }
-            })
-            .catch((err) => {
-                throw new Error(err)
-            })
+        if (props.id) {
+            patchUserDetails(props.id, name, email, company)
+                .then((response) => {
+                    if (response.ok) {
+                        setDataPatched(true)
+                    } else {
+                        throw new Error("error patching the request")
+                    }
+                })
+                .catch((err) => {
+                    throw new Error(err)
+                })
+        }
         return;
     }
 
