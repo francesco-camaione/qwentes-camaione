@@ -1,4 +1,4 @@
-export function initials(full_name: string | undefined): string | undefined  {
+export function initials(full_name: string | undefined): string | undefined {
     // return first letter of full-name
     if (typeof full_name === undefined) {
         return;

@@ -52,29 +52,31 @@ const calculateSum = async (n: number, r: number): Promise<number> => {
     return n + r
 }
 
-const fetchData = async (url: string) => {
-    new Promise((res, rej) => fetch(url, {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
-    })
-        .then(response => {
-            if (response.ok) {
-                res(response)
-            } else {
-                throw new Error("error")
-            }
-        }
-        )
-        .catch(err => rej(err))
-
-    )
-    return;
-}
-
-
 function filterArrayByType<T extends U, U>(arr: (T | U)[], t: U): U[] {
     const filteredArray: U[] = arr.filter((el) => {
         return typeof el === typeof t
     })
     return filteredArray
+}
+
+function fetchData(url: string): Promise<Response> {
+    return new Promise((resolve, reject) => {
+        fetch(url, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: ""
+        })
+            .then((response) => {
+                if (response.ok) {
+                    resolve(response)
+                } else {
+                    reject(new Error("request failed"))
+                }
+            })
+            .catch(err => {
+                throw new Error("err: ", err)
+            })
+    })
 }
