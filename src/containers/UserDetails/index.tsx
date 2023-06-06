@@ -8,42 +8,11 @@ import { Form } from "./Form"
 import { Post } from "../../components/Post"
 import "./UserDetails.css"
 
-const empty_post = [{
-    userId: 0,
-    id: 0,
-    title: "",
-    body: "",
-}]
-
-const empty_address: AddressModel = {
-    street: "",
-    suite: "",
-    city: "",
-    zipcode: 0,
-    geo: { lat: 0, lng: 0 }
-}
-
-const empty_company: CompanyModel = {
-    name: "",
-    catchPhrase: "",
-    bs: ""
-}
-
-const empty_data: ContactModel = {
-    id: 0,
-    name: "",
-    username: "",
-    email: "",
-    address: empty_address,
-    phone: 0,
-    website: "",
-    company: empty_company
-}
 
 export function UserDetails(): JSX.Element {
     const userId: number = useSelector((state: any) => state.userId.value)
-    const [data, setData] = useState<ContactModel>(empty_data)
-    const [post, setPost] = useState<PostModel[]>(empty_post)
+    const [data, setData] = useState<ContactModel>({} as ContactModel)
+    const [post, setPost] = useState<PostModel[]>([] as PostModel[])
 
     useEffect(() => {
         getUserDetails(userId).then(async response => {
