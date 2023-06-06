@@ -14,7 +14,7 @@ export function PostList(): JSX.Element {
                 setPosts(await response.json())
             }
         }).catch(error => {
-            setPosts(error)
+            throw new Error(error)
         })
     }, [])
 

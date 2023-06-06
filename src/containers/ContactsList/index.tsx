@@ -18,7 +18,7 @@ export function ContactsList(): JSX.Element {
                     throw new Error("error during the get data request")
                 }
             }).catch((error) => {
-                setData(() => error)
+                throw new Error(error)
             })
     }, [])
 

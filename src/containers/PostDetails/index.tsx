@@ -23,7 +23,7 @@ export function PostDetails(): JSX.Element {
                 setPostInfo(await response.json())
             }
         }).catch(error => {
-            setPostInfo(error)
+            throw new Error(error)
         })
 
         getUserDetails(userId).then(async response => {
@@ -31,7 +31,7 @@ export function PostDetails(): JSX.Element {
                 setAuthor(await response.json())
             }
         }).catch(error => {
-            setAuthor(error)
+            throw new Error(error)
         })
 
         getComments(postId).then(async response => {
@@ -39,7 +39,7 @@ export function PostDetails(): JSX.Element {
                 setComments(await response.json())
             }
         }).catch(error => {
-            setComments(error)
+            throw new Error(error)
         })
     }, [postId, userId])
 
